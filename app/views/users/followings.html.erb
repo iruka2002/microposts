@@ -9,9 +9,10 @@
       <div class="panel-body">
         <img class="media-object img-rounded img-responsive" src="
 <%= gravatar_url(@user, { size: 500 }) %>
-"alt="">
+" alt="">
       </div>
     </div>
+    
     
 <%= render 'relationships/follow_button', user: @user %>
 
@@ -37,8 +38,6 @@ Followings <span class="badge">
 <% end %>
 </li>
       <li class="
-<%= 'active' if current_page?(followers_user_path(@user)) %>
-">
 <%= link_to followers_user_path(@user) do %>
 Followers <span class="badge">
 <%= @count_followers %>
@@ -47,7 +46,7 @@ Followers <span class="badge">
 </li>
     </ul>
   
-<%= render 'microposts/microposts', microposts: @microposts %>
+<%= render 'users', users: @followings %>  
   
   </div>
 </div>

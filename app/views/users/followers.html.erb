@@ -9,7 +9,7 @@
       <div class="panel-body">
         <img class="media-object img-rounded img-responsive" src="
 <%= gravatar_url(@user, { size: 500 }) %>
-"alt="">
+" alt="">
       </div>
     </div>
     
@@ -46,8 +46,8 @@ Followers <span class="badge">
 <% end %>
 </li>
     </ul>
-  
-<%= render 'microposts/microposts', microposts: @microposts %>
-  
+    
+<%= render 'users', users: @followers %>
+
   </div>
 </div>
