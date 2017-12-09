@@ -4,7 +4,7 @@
       <div class="panel-heading">
         <h3 class="panel-title">
 <%= @user.name %>
-</h3>
+        </h3>
       </div>
       <div class="panel-body">
         <img class="media-object img-rounded img-responsive" src="
@@ -24,28 +24,28 @@
 <%= link_to user_path(@user) do %>
 Microposts <span class="badge">
 <%= @count_microposts %>
-</span>
+           </span>
 <% end %>
-</li>
+      </li>
       <li class="
 <%= 'active' if current_page?(followings_user_path(@user)) %>
 ">
 <%= link_to followings_user_path(@user) do %>
 Followings <span class="badge">
 <%= @count_followings %>
-</span>
+           </span>
 <% end %>
-</li>
+      </li>
       <li class="
 <%= 'active' if current_page?(followers_user_path(@user)) %>
 ">
 <%= link_to followers_user_path(@user) do %>
 Followers <span class="badge">
 <%= @count_followers %>
-</span>
+          </span>
 <% end %>
-</li>
-    </ul>
+      </li>
+    
   
 <%= render 'microposts/microposts', microposts: @microposts %>
   
